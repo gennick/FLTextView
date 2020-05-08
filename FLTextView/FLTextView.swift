@@ -188,9 +188,9 @@ open class FLTextView: UITextView {
         showPlaceholderViewIfNeeded()
         
         let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(textDidChange(notification:)), name: NSNotification.Name.UITextViewTextDidChange, object: self)
-        notificationCenter.addObserver(self, selector: #selector(textViewDidBeginEditing(notification:)), name: NSNotification.Name.UITextViewTextDidBeginEditing, object: self)
-        notificationCenter.addObserver(self, selector: #selector(textViewDidEndEditing(notification:)), name: NSNotification.Name.UITextViewTextDidEndEditing, object: self)
+        notificationCenter.addObserver(self, selector: #selector(textDidChange(notification:)), name: UITextView.textDidChangeNotification, object: self)
+        notificationCenter.addObserver(self, selector: #selector(textViewDidBeginEditing(notification:)), name: UITextView.textDidBeginEditingNotification, object: self)
+        notificationCenter.addObserver(self, selector: #selector(textViewDidEndEditing(notification:)), name: UITextView.textDidEndEditingNotification, object: self)
     }
     
     private func showPlaceholderViewIfNeeded() {
@@ -221,7 +221,7 @@ open class FLTextView: UITextView {
                 invalidateIntrinsicContentSize()
             }
             
-            contentInset = UIEdgeInsetsMake(0.0, 0.0, size.height - contentSize.height, 0.0)
+            contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: size.height - contentSize.height, right: 0.0)
         } else {
             contentInset = UIEdgeInsets.zero
         }

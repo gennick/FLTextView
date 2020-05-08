@@ -129,8 +129,8 @@
 				TargetAttributes = {
 					9F6299FD1AD3CDA5009CDDA3 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = EQA9435SKP;
-						LastSwiftMigration = 0920;
+						DevelopmentTeam = LZ94ANRZ62;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -139,6 +139,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -291,7 +292,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -310,7 +311,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
